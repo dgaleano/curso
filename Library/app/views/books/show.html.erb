@@ -15,5 +15,5 @@
   <%= @book.year %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', book_index_path %>
+<%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-outline-success' %>
+<%= link_to 'Back', book_index_path, class: 'btn btn-outline-dark' %>

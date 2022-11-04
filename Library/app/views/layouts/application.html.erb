@@ -11,6 +11,16 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <%= link_to 'My Library', book_index_path, class: 'navbar-brand' %>
+      <div class="collapse navbar-collapse justify-content-end">
+      <% if user_signed_in? %>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      <% end %>
+      </div>
+    </div>
+  </nav>
     <div class="container">
       <%= yield %>
     </div>
